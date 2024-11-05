@@ -1,0 +1,119 @@
+@import url("https://fonts.googleapis.com/css2?family=Cairo&display=swap");
+
+@import url("https://fonts.googleapis.com/css2?family=Oswald:wght@200..700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap");
+
+* {
+  box-sizing: border-box;
+}
+
+p {
+  &:has(br) {
+    line-height: 5px !important;
+  }
+}
+
+:root {
+  --title-font: "Oswald", sans-serif;
+  --body-font: "Open Sans", sans-serif;
+  --red-primary: #951914;
+  --red-secound-primary: #ce0b10;
+  --blue-primary: #1b3f92;
+
+  [dir="rtl"] {
+    --body-font: "Cairo", sans-serif;
+    --title-font: "Cairo", sans-serif;
+  }
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: var(--body-font);
+  text-align: start;
+  -webkit-font-smoothing: antialiased;
+  -webkit-tap-highlight-color: transparent;
+  text-rendering: optimizeLegibility;
+  margin: 0;
+  height: 100%;
+  overflow-x: hidden;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+
+  &:focus {
+    box-shadow: none !important;
+  }
+}
+
+[dir="rtl"] {
+  * {
+    letter-spacing: normal !important;
+  }
+
+  input[type="email"]::placeholder {
+    text-align: end;
+  }
+}
+
+input::-webkit-input-placeholder {
+  color: inherit;
+}
+
+input::placeholder {
+  color: inherit;
+}
+
+iframe {
+  border: none;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+textarea {
+  resize: none;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-weight: 400;
+  margin: 0;
+  padding: 0;
+  overflow-wrap: break-word;
+  hyphens: auto;
+  font-family: var(--title-font);
+}
+
+p {
+  font-family: var(--body-font);
+  margin: 0;
+  padding: 0;
+  line-height: 2rem;
+  overflow-wrap: break-word;
+  hyphens: auto;
+}
+
+ul {
+  list-style: none;
+  margin-block: 0;
+  padding-inline-start: 0;
+  font-family: var(--body-font);
+  li {
+    font-family: var(--body-font);
+  }
+}
+
+input {
+  width: 100%;
+}
